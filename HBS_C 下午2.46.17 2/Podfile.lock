@@ -1,0 +1,51 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Masonry (1.0.1)
+  - MJRefresh (3.0.8)
+  - MOBFoundation (2.0.11)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - ShareSDK3 (3.4.2):
+    - ShareSDK3/ShareSDK (= 3.4.2)
+  - ShareSDK3/ShareSDK (3.4.2)
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.4.2)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.4.2)
+  - ShareSDK3/ShareSDKUI (3.4.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - Masonry (~> 1.0.1)
+  - MJRefresh (~> 3.0.4)
+  - MOBFoundation
+  - SDWebImage (~> 3.7.3)
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - ShareSDK3/ShareSDKUI
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  MOBFoundation: e213065e65eebd8146ab29d10a8445dc8f385091
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  ShareSDK3: 2fa975dd22937fc7de3f6b5d0c41a18ba0dd1661
+
+PODFILE CHECKSUM: 68dc585a7c53f8f04d750c1913260172c0979e75
+
+COCOAPODS: 1.0.1
