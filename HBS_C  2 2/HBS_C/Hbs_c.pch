@@ -1,0 +1,166 @@
+//
+//  Hbs_c.pch
+//  HBS_C
+//
+//  Created by wangzuowen on 16/9/9.
+//  Copyright © 2016年 wangzuowen. All rights reserved.
+//
+
+#ifndef Hbs_c_pch
+#define Hbs_c_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+//基类
+#import "BaseTabBarViewController.h"
+#import "BaseNavigationViewController.h"
+#import "BaseViewController.h"
+#import "BaseTableViewController.h"
+#import "BaseCollectionViewController.h"
+
+#import "HBSNetWork.h"
+#import "WZWModel.h"
+
+// VC
+#import "MainViewController.h"
+#import "HunBaViewController.h"
+#import "MeViewController.h"
+#import "HBSLoginController.h"
+
+//three
+#import "Masonry.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "phoneViewController.h"
+#import "UIView+HBSExtention.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import "UIViewController+Utilities.h"
+
+//工具
+#import "UIView+frame.h"
+#import "NSString+check.h"
+#import "ProjectCache.h"
+
+#import "MyLabel.h"
+
+
+
+#ifdef DEBUG
+#define HBSLog(...) NSLog(__VA_ARGS__)
+#else
+#define HBSLog(...)
+#endif
+
+//define
+#define APPDELEGATE [UIApplication sharedApplication].delegate
+#define WIDTH  [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define WSHIPEI  WIDTH / 375
+#define HSHIPEI  HEIGHT / 667
+#define HBSNetAdress @"http://192.168.0.82:10081/"
+#define userToken @"123456"
+#define ZHANWEI [UIImage imageNamed:@"img_1-1@2x"]
+#define ZHANWEIF [UIImage imageNamed:@"img_16-9@2x"]
+#define VZHANWEI [UIImage imageNamed:@"img_1_guanjia"]
+#define CZHANWEI [UIImage imageNamed:@"img_16-9"]
+
+#define HBS_NSlogWithObject(str,object) NSLog(str, object);
+#define HBS_NSlog(str) NSLog(str);
+
+#import "ProjectCache.h"
+//通知
+#define GetNSUserDefaults(key) [[NSUserDefaults standardUserDefaults]objectForKey:key]
+#define SetNSUserDefaults(object, key) [[NSUserDefaults standardUserDefaults]setObject:object forKey:key]
+
+//快捷
+#define FONT(font) [UIFont systemFontOfSize:font];
+#define TITLE self.navigationItem.title
+#define WZWURLWithString(urlStr) [NSURL URLWithString:urlStr]
+
+#define ImageNameSet(fileName) [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:fileName ofType:nil]]
+
+//新建
+#define LabelAlloc(x,y,w,h) [[UILabel alloc] initWithFrame:CGRectMake(x, y, w, h)];
+#define ImageAlloc(x,y,w,h) [[UIImageView alloc] initWithFrame:CGRectMake(x, y, w, h)];
+#define ViewAlloc(x,y,w,h) [[UIView alloc] initWithFrame:CGRectMake(x, y, w, h)];
+#define TextFieldAlloc(x,y,w,h) [[UITextField alloc] initWithFrame:CGRectMake(x, y, w, h)];
+
+//存本地
+#define user_im_add(user_im) [[NSUserDefaults standardUserDefaults]setObject:user_im forKey:@"user_im"];
+#define user_im_find [[NSUserDefaults standardUserDefaults]objectForKey:@"user_im"];
+//用户密码
+#define user_password_add(user_password) [[NSUserDefaults standardUserDefaults]setObject:user_password forKey:@"user_password"];
+#define user_password_find [[NSUserDefaults standardUserDefaults]objectForKey:@"user_password"];
+//登录id
+#define user_id_add(user_id) [[NSUserDefaults standardUserDefaults]setObject:user_id forKey:@"user_id"];
+#define user_id_find [[NSUserDefaults standardUserDefaults]objectForKey:@"user_id"];
+
+#define user_mobile_add(user_id) [[NSUserDefaults standardUserDefaults]setObject:user_id forKey:@"user_mobile"];
+#define user_mobile_find [[NSUserDefaults standardUserDefaults]objectForKey:@"user_mobile"];
+
+//#define user_id_find @"1036"
+
+//color
+#define LANSE [UIColor colorWithRed:71/255.0 green:180/255.0 blue:184/255.0 alpha:1.0]
+#define RANDOMCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define FENSE [UIColor colorWithRed:233/255.0 green:81/255.0 blue:84/255.0 alpha:1.0]
+#define HEISE [UIColor colorWithRed:68/255.0 green:68/255.0 blue:68/255.0 alpha:1.0]
+#define BEIJINGSE [UIColor colorWithRed:244/255.0 green:244/255.0 blue:243/255.0 alpha:1.0]
+#define yiwusanColor [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]
+#define yiqijiuColor [UIColor colorWithRed:179/255.0 green:179/255.0 blue:179/255.0 alpha:1.0]
+#define ererjiuColor [UIColor colorWithRed:229/255.0 green:229/255.0 blue:229/255.0 alpha:1.0]
+#define yisanliuColor [UIColor colorWithRed:136/255.0 green:136/255.0 blue:136/255.0 alpha:1.0]
+#define yilingerColor [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0]
+#define HBSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+#define HBSRandomColor HBSColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define erlingsiColor HBSColor(204, 204, 204)
+#define HBSCommonBgColor HBSColor(206, 206, 206)
+#define BAISE [UIColor whiteColor]
+
+#define WZWmagentaColor [UIColor magentaColor]
+#define WZWblackColor [UIColor blackColor]
+#define WZWorangeColor [UIColor orangeColor]
+#define WZWwhiteColor [UIColor whiteColor]
+#define WZWlightGrayColor [UIColor lightGrayColor]
+#define WZWgrayColor [UIColor grayColor]
+#define WZWClearColor [UIColor clearColor]
+
+#define DOCUMENTS [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+
+//自适应
+#import "TextAdapter.h"
+
+
+/** IM通知 */
+#define HMSortDidSelectNotification @"HMSortDidSelectNotification"
+#define HMSelectedSort @"HMSelectedSort"
+
+#define HMCityDidSelectNotification @"HMCityDidSelectNotification"
+#define HMSelectedCity @"HMSelectedCity"
+
+#define HMCategoryDidSelectNotification @"HMCategoryDidSelectNotification"
+#define HMSelectedCategory @"HMSelectedCategory"
+#define HMSelectedSubCategoryName @"HMSelectedSubCategoryName"
+
+#define HMRegionDidSelectNotification @"HMRegionDidSelectNotification"
+#define HMSelectedRegion @"HMSelectedRegion"
+#define HMSelectedSubRegionName @"HMSelectedSubRegionName"
+
+#define HMNotificationCenter [NSNotificationCenter defaultCenter]
+#define HMAddObsver(methodName, noteName) [HMNotificationCenter addObserver:self selector:@selector(methodName) name:noteName object:nil];
+#define HMRemoveObsver [HMNotificationCenter removeObserver:self];
+
+#endif /* Hbs_c_pch */
+
+
+#ifdef __OBJC__
+#import "EMSDK.h"
+#import "EaseUI.h"
+#import "ChatViewController.h"
+#endif
+
+#endif
