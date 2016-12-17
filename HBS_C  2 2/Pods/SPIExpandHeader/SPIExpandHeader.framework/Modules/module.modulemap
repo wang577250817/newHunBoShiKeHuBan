@@ -1,6 +1,0 @@
-framework module SPIExpandHeader {
-  umbrella header "SPIExpandHeader.h"
-
-  export *
-  module * { export * }
-}
