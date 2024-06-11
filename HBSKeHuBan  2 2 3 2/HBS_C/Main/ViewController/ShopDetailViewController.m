@@ -67,6 +67,7 @@
     
     [self creatTabelView];
     [self creatHeaderView];
+
     [self netWorking];
     _isMore = NO;
 }

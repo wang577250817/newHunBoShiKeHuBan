@@ -216,7 +216,7 @@
         if ([name containsString:searchText]) {
             EMConversation *conversation = [[EMClient sharedClient].chatManager getConversation:name type:EMConversationTypeChat createIfNotExist:YES];
             [arr addObject:conversation];
-            NSLog(@"name  :%@ searchText: %@", name, searchText);
+            NSLog(@"name 哈哈哈  :%@ searchText: %@", name, searchText);
         }
     }
     [self setDataSource:arr];
